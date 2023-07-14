@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+/* Calculator container starts */
+.calculator {
+  width: 25%;
+  height: 620px;
+  background-color: black;
+  border: 1px solid;
+  border-radius: 20px;
+  margin: 100px auto 0px auto;
+  box-shadow: 1px 2px 3px 4px grey;
 }
+/* Calculator container ends */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Result container starts */
+.display {
+  height: 100px;
+  width: 100%;
   color: white;
+  position: relative;
+  font-size: 70px;
+  margin: 20px 40px 0px 0px;
+}
+/* Result container ends */
+
+/* Result content starts */
+.display-content {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+}
+/* Result content ends */
+
+/* Characters and symbol container starts */
+.layout {
+  height: 520px;
+  color: white;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  padding-bottom: 20px;
+}
+/* Characters and symbol container ends */
+
+/* characters class starts here */
+.chars {
+  justify-self: center;
+  background-color: grey;
+  height: 70px;
+  width: 80%;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-dark {
+  background-color: rgb(96, 96, 96);
 }
+/* characters class end here */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* characters with different color start here */
+.col-orange {
+  background-color: orange;
+}
+/* characters with different color ends here */
+
+/* Mobile device screen responsiveness start here*/
+@media (max-width: 520px) {
+  .calculator {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Tablet device screen responsiveness start here*/
+@media (max-width: 720px) {
+  .calculator {
+    width: 60% !important;
   }
 }
